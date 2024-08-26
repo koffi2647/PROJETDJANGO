@@ -16,36 +16,15 @@ Including another URLconf
     
 """
 
-
-
-
 from django.contrib import admin
 from django.urls import include, path
-from eleve.views import index
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('eleve/',include("eleve.urls")),
-    path('dashboard/',include("dashboard.urls")),
-    path('professeur/',include("professeur.urls")),
-    path('ajoutEleve/',include("ajoutEleve.urls")),
-    path('ajouteUser/',include("ajouteUser.urls")),
-    path('ajoutProf/',include("ajoutProf.urls")),
-    path('connection/',include("connection.urls")),
-    path('listerUser/',include("listerUser.urls")),
-    path('modifierEleve/',include("modifierEleve.urls")),
-    path('modifierProf/',include("modifierProf.urls")),
-    path('modifUser/',include("modifUser.urls")),
-    path('rapports/',include("rapports.urls")),
-    
-    
-    
-    
-    
-     
-    
-    
-    
-    
-    
+    path('student/',include('student.urls')),
+    path('dashboard/',include('dashboard.urls')),
+    path('teacher/',include('teacher.urls')),
+    path('user/',include('user.urls')),
+    path('report/',include('report.urls')),
 ]
